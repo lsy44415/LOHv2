@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="aqq.EditCourse">
+
+      
+        <StackLayout x:Name="s1"  Padding="10,10,10,10">
+             <Label Text="Edit Course" XAlign="Center" FontSize="14"></Label>
+    <Picker x:Name="location1" Title="Choose the library">
+  
+        </Picker>
+        <Entry Placeholder="Course Topic" x:Name="topic1"></Entry>
+       <DatePicker x:Name="date1" Format="dd/MM/yyyy" MinimumDate="09/05/2017"></DatePicker>
+                <TimePicker x:Name="time1"></TimePicker>
+    
+      <Button Text="Update" Clicked="Handle_Clicked"></Button>
+            <Label x:Name="label1" IsVisible="false" TextColor="Red" FontSize="12" Text="Please enter the topic of course"></Label>
+    </StackLayout>
+</ContentPage>

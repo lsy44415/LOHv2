@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="aqq.FriendListPage">
+<StackLayout Padding="10,10,10,10">
+<Label Text="Friend List" XAlign="Center"></Label>
+         <StackLayout>
+        <Label x:Name="tip" XAlign="Center" FontSize="12" Text="" TextColor="Gray"></Label>
+             </StackLayout>
+ <ListView x:Name="listview" RowHeight="45" SeparatorColor="Silver" HasUnevenRows="true" IsVisible="false">
+     <ListView.ItemTemplate>
+           <DataTemplate>
+                   
+                <ViewCell>
+                        
+                   
+                                <Grid>                           
+                                <Label  Grid.Row="0"  Text="{Binding Name2}" FontSize="12" x:Name="n2"/> 
+                                <Label  Grid.Row="1"  Text="{Binding Email2}" FontSize="14" x:Name="e2"/>
+                                </Grid>
+                  
+
+                          
+<ViewCell.ContextActions> 
+            <MenuItem  Text="Email"  Clicked="Email_Clicked" CommandParameter="{Binding .}"></MenuItem>
+            <MenuItem Text="SMS" Clicked="Phone_Clicked" CommandParameter="{Binding .}"></MenuItem>
+                </ViewCell.ContextActions>
+
+                  
+                  </ViewCell>      
+            </DataTemplate>
+     </ListView.ItemTemplate>
+ </ListView>
+
+        <ListView x:Name="listview2" RowHeight="45" SeparatorColor="Silver" HasUnevenRows="true"  IsVisible="false">
+     <ListView.ItemTemplate>
+           <DataTemplate>
+                   
+                <ViewCell>
+                        
+                    <StackLayout Orientation="Horizontal" Padding="5">
+
+                            <StackLayout HorizontalOptions="StartAndExpand">
+                                <Grid>       
+
+                          
+                                <Label  Grid.Row="0" Grid.Column="0" Text="{Binding Learner}" FontSize="12" x:Name="n2"/> 
+                             <Label  Grid.Row="1" Grid.ColumnSpan="4" Text="{Binding Email1}" FontSize="14" x:Name="e2"/>
+                                </Grid>
+                  
+
+                            </StackLayout>
+                    
+
+                 
+                            
+                     </StackLayout> 
+    <ViewCell.ContextActions> 
+            <MenuItem  Text="Email"  Clicked="Email_Clicked2" CommandParameter="{Binding .}"></MenuItem>
+            <MenuItem Text="SMS" Clicked="Phone_Clicked2" CommandParameter="{Binding .}"></MenuItem>
+                </ViewCell.ContextActions>
+
+   
+             
+                  </ViewCell>      
+            </DataTemplate>
+     </ListView.ItemTemplate>
+ </ListView>
+</StackLayout>
+</ContentPage>

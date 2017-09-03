@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="aqq.TeachPage">
+
+      <ScrollView>
+        <StackLayout Padding="10,10,10,10">
+      
+    <!--    <Button Text="Add Course" Clicked="Handle_Clicked"></Button>-->
+        <StackLayout x:Name="s1" >
+  <Label XAlign="Center" Text="Please schedule your class but choosing the venue and an appropriate time." FontSize="14"></Label>
+               
+    <Picker x:Name="location1" Title="Choose the library to teach learner">
+        </Picker>
+        <Entry Placeholder="course topic" x:Name="topic1"></Entry>
+                
+    
+                    <DatePicker x:Name="date1" Format="dd/MM/yyyy" MinimumDate="09/05/2017"></DatePicker>
+       
+                    <TimePicker x:Name="time1"></TimePicker>
+                       
+       <Button Text="Add Course" Clicked="Submit_Clicked1"></Button>
+                 
+    </StackLayout>
+  <!-- <StackLayout IsVisible="false" x:Name="s2">
+            <Label Text="Course 2"></Label>
+    <Picker x:Name="location2" Title="Choose the library">
+     <Picker.Items>
+                <x:String>xx library</x:String>
+                <x:String>bb</x:String>
+                <x:String>aa</x:String>
+                <x:String>ss</x:String>
+            </Picker.Items>
+        </Picker>
+         <Entry Placeholder="Course topic" x:Name="topic2"></Entry>
+       <DatePicker x:Name="date2" Format="dd/MM/yyyy" MinimumDate="05/09/2017"></DatePicker>
+                <TimePicker x:Name="time2"></TimePicker>
+                 <Button Text="submit" Clicked="Submit_Clicked2"></Button>
+    </StackLayout>
+        <StackLayout IsVisible="false" x:Name="s3">
+             <Label Text="Course 3"></Label>
+    <Picker x:Name="location3" Title="Choose the library">
+     <Picker.Items>
+                <x:String>xx library</x:String>
+                <x:String>bb</x:String>
+                <x:String>aa</x:String>
+                <x:String>ss</x:String>
+            </Picker.Items>
+        </Picker>
+         <Entry Placeholder="Course topic" x:Name="topic3"></Entry>
+       <DatePicker x:Name="date3" Format="dd/MM/yyyy" MinimumDate="05/09/2017"></DatePicker>
+                <TimePicker x:Name="time3"></TimePicker>
+                 <Button Text="submit" Clicked="Submit_Clicked3"></Button>
+    </StackLayout>
+        <StackLayout IsVisible="false" x:Name="s4">
+             <Label Text="Course 4"></Label>
+    <Picker x:Name="location4" Title="Choose the library">
+     <Picker.Items>
+                <x:String>xx library</x:String>
+                <x:String>bb</x:String>
+                <x:String>aa</x:String>
+                <x:String>ss</x:String>
+            </Picker.Items>
+        </Picker>
+        <Entry Placeholder="course topic" x:Name="topic4"></Entry>
+       <DatePicker x:Name="date4" Format="dd/MM/yyyy" MinimumDate="05/09/2017"></DatePicker>
+                <TimePicker x:Name="time4"></TimePicker>
+                 <Button Text="Add Course" Clicked="Submit_Clicked4"></Button>
+    </StackLayout>-->
+           <Label x:Name="label1" IsVisible="false" TextColor="Red" FontSize="12" Text="Please enter the topic of course"></Label>
+       
+           <Button Text="Display courses" Clicked="Handle_Clicked2"></Button>
+    </StackLayout> </ScrollView>
+</ContentPage>

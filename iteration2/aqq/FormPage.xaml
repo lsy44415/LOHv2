@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="aqq.FormPage">
+
+<StackLayout Padding="10,20,10,10" Spacing="6">
+ <Label XAlign="Center" Text="Please let us know what skill you are interesting in learning:" ></Label>
+     <Picker x:Name="picker" Title="Skills list">
+        <Picker.Items>
+                <x:String>ICT</x:String>
+                <x:String>English</x:String>
+                <x:String>Health</x:String>
+                <x:String>Food</x:String>
+            </Picker.Items>
+        </Picker>
+  
+        <Entry TextColor="Navy" Keyboard="Text"
+         Placeholder="User name" x:Name="name"></Entry>
+           
+              <Entry TextColor="Navy" Keyboard="Text" 
+            Placeholder="PostCode" x:Name="post"></Entry>
+      
+
+       <Button Text="Submit" Clicked="Handle_Clicked1" x:Name="btn1"></Button>
+        <Label XAlign="Center" Text="(If you have already filled this form, you can directly view other learners and courses)" FontSize="10" TextColor="Gray"></Label>
+       <StackLayout Spacing="15" Orientation="Vertical">
+       <Button Text="List peer names" Clicked="Handle_Clicked2"  x:Name="btn2" ></Button>
+       <Button Text="List courses" Clicked="Handle_Clicked3"  x:Name="btn3" ></Button>
+       </StackLayout>
+        <Label x:Name="label1" IsVisible="false" TextColor="Red" FontSize="12" Text="Please enter a username"></Label>
+         <Label x:Name="label3" IsVisible="false" TextColor="Red" FontSize="12" Text="Please enter a valid Victoria postcode(e.g.3000)"></Label>
+          
+    </StackLayout>
+
+    
+</ContentPage>
